@@ -1,5 +1,5 @@
 ﻿options:
-  machineType: 'E2-MICRO'
+  machineType: 'E2_HIGHCPU_8'
 
 timeout: 1200s
 
