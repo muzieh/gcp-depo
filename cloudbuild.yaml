@@ -27,7 +27,7 @@ steps:
   # Deploy to Cloud Run
   - id: 'deploy'
     name: 'gcr.io/cloud-builders/gcloud'
-    waitFor: ['push-image', 'run-integration-tests']
+    waitFor: ['push-image']
     entrypoint: bash
     args:
       - '-c'
