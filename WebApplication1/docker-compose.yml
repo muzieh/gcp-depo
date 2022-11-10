@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  web_server:
+    build: ./WebApplication1/
+    ports:
+      - "3010:80"
+      - "3020:443"
+    depends_on:
+      - "seq"
+  web_client:
+    build: ./WebApplication2/
+    ports:
+      - "3011:80"
+      - "3021:443"
+    depends_on:
+      - "seq"
+  seq:
+    image: "datalust/seq"
+    ports:
+      - 3030:80
+      - 5341:5341
+    environment:
+      - ACCEPT_EULA=Y
+
+    
+
+
